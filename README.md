@@ -1,16 +1,18 @@
-# v-book
+# Vue 移动电子书
 
-## Project setup
+## 首先 安装依赖项
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译开发者模式
 ```
 npm run serve
+or
+npm run cxwht
 ```
 
-### Compiles and minifies for production
+### 打包代码上线为静态资源
 ```
 npm run build
 ```
@@ -24,3 +26,5 @@ npm run test
 ```
 npm run lint
 ```
+
+
