@@ -21,7 +21,7 @@
       initEpub () {
         const baseUrl = 'http://127.0.0.1:8080/' + this.fileName + '.epub'
         console.log(baseUrl)
-        this.book = new Epub(baseUrl)
+        this.book = ePub(baseUrl)
         this.rendition = this.book.renderTo('read', {
           width: window.innerWidth,
           height: window.innerHeight,
@@ -29,11 +29,11 @@
         })
         console.log(this.book)
         this.rendition.display()
-        this.rendition.on('touchstart', event => {
+        this.rendition.book.on('touchstart', event => {
           this.touchStartX = event.changeTouches[0].clientX
           this.touchStartTime = event.timeStamp
         })
-        this.rendition.on('touchend', event => {
+        this.rendition.book.on('touchend', event => {
           const offsetX = event.changedTouched[0].clientX - this.touchStartX
           const time = event.timeStamp - this.touchStartTime
           console.log(offsetX, time)
