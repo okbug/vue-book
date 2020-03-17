@@ -6,7 +6,11 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+	mounted() {
+		console.log("App start");
+	}
+  }
   // 设置rem 最大50像素，为浏览器宽度十分之一 还有使用scss
   document.addEventListener('DOMContentLoaded', () => {
   const html = document.querySelector('html')
@@ -14,6 +18,8 @@
   fontSize = fontSize > 50 ? 50 : fontSize
   html.style.fontSize = fontSize + 'px'
   })
+  
+  
 
 </script>
 
